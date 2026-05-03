@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="makasih.css">
+    <title>terima kasih kak</title>
+</head>
+<body>
+
+    <div class="music-player" onclick="toggleMusic()">
+    <span id="musicIcon">▶</span>
+</div>
+
+    <audio id="bgMusic" loop>
+        <source src="Ini abadi.mpeg" type="audio/mpeg">
+    </audio>
+ <!---hati melayang-->
+      <div class="floating-hearts">
+            <span>💖</span><span>✨</span><span>💕</span><span>🌸</span>
+            <span>💖</span><span>✨</span><span>💕</span><span>🌸</span>
+            <span>💖</span><span>✨</span><span>💕</span><span>🌸</span>
+            <span>💖</span><span>✨</span>
+        </div>
+<div class="slider">
+
+    <!-- SLIDE 1 -->
+    <div class="slide active"> 
+        <h1>💌 ada pesan buat kak latifa</h1>
+        <p>aku punya sesuatu nih..</p> 
+        <button onclick="nextSlide()">Mulai</button> 
+    </div>
+
+    <!-- SLIDE 2 -->
+
+    <div class="slide">
+        <h1>💌 Surat Untuk Kak Latifa</h1>
+
+        <div class="envelope-wrapper" id="envelopeWrapper" onclick="openEnvelope()">
+            <!-- Background amplop -->
+            <div class="envelope-back"></div>
+
+            <!-- Surat di dalam (akan keluar saat dibuka) -->
+            <div class="letter-paper">
+                <img src="WhatsApp Image 2026-04-26 at 16.27.50.jpeg" alt="Foto kelompok">
+                <p>Terima kasih kak sudah membimbing kami dengan sepenuh hati 💖</p>
+            </div>
+
+            <!-- Saku depan (V-shape) yg nutupin surat -->
+            <div class="envelope-front"></div>
+
+            <!-- Tutup atas (yg akan terbuka) -->
+            <div class="envelope-flap"></div>
+
+            <!-- Hati di tengah -->
+            <div class="envelope-heart">♥</div>
+        </div>
+
+        <p class="hint-text" id="hintText">👆 Tekan surat tersebut</p>
+        <button id="nextEnvelope" onclick="nextSlide()" style="display:none;">Lanjut</button>
+    </div>
+        
+
+
+
+    <!-- SLIDE 3 (VOICE) -->
+    <div class="slide">
+        <h1>🎙️ Pesan Suara Untuk Kak Latifa</h1>
+        <p>Dengerin pesan dari kami yah! 💌</p>
+
+        <div class="voice-container">
+
+        <!-- 10 AUDIO -->
+
+          <!-- AUDIO 1 -->
+        <div class="voice-chat left hidden">    
+            <div class="bubble">
+                <p class="pengirim">Dari Alip</p>
+                <audio controls src="audio alip .ogg"></audio>
+            </div>
+        </div>
+
+    <!-- AUDIO 2 -->
+        <div class="voice-chat right hidden">
+            <div class="bubble">
+                <p class="pengirim">Dari Andi</p>
+                <audio controls src="audio coba coba.ogg"></audio>
+            </div>
+        </div>
+
+        <!-- AUDIO 3 -->
+        <div class="voice-chat left hidden">
+            <div class="bubble">
+                <p class="pengirim">Dari Budi</p>
+                <audio controls src="audio coba coba.ogg"></audio>
+            </div>
+        </div>
+
+    <!-- AUDIO 4 --> 
+        <div class="voice-chat right hidden">
+            <div class="bubble">
+                <p class="pengirim">Dari Citra</p>
+                <audio controls src="audio coba coba.ogg"></audio>
+            </div>
+        </div>
+
+    <!-- AUDIO 5 -->
+        <div class="voice-chat left hidden">
+            <div class="bubble">
+                <p class="pengirim">Dari Dina</p>
+                <audio controls src="audio coba coba.ogg"></audio>
+            </div>
+        </div>
+
+        <!-- AUDIO 6 -->
+            <div class="voice-chat right hidden">
+                <div class="bubble">
+                    <p class="pengirim">Dari Eko</p>
+                    <audio controls src="audio coba coba.ogg"></audio>
+                </div>
+            </div>
+        <!-- AUDIO 7 -->
+        <div class="voice-chat left hidden">
+            <div class="bubble">
+                <p class="pengirim">Dari Fina</p>
+                <audio controls src="audio coba coba.ogg"></audio>
+            </div>
+         </div>
+
+        <!-- AUDIO 8 -->
+        <div class="voice-chat right hidden">
+            <div class="bubble">
+                <p class="pengirim">Dari Gita</p>
+                <audio controls src="audio coba coba.ogg"></audio>
+            </div>
+        </div>
+
+        <!-- AUDIO 9 -->
+        <div class="voice-chat left hidden">
+            <div class="bubble">
+                <p class="pengirim">Dari olo</p>
+                <audio controls src="audio coba coba.ogg"></audio>
+            </div>
+        </div>
+
+        <!-- AUDIO 10 -->
+          <div class="voice-chat right hidden">
+            <div class="bubble">
+                <p class="pengirim">Dari mpruy</p>
+                <audio controls src="audio coba coba.ogg"></audio>
+            </div>
+        </div>
+
+
+    </div>
+        <button onclick="nextSlide()">Lanjut</button>
+    </div>
+
+   
+    <!-- SLIDE 4 (FINAL) -->
+    <div class="slide final-slide">
+       
+
+        <div class="final-card">
+            <div class="badge reveal-item" data-delay="200">🌸 Untuk Kak Latifa 🌸</div>
+
+            <h1 class="final-title reveal-item" data-delay="600">
+                <span class="kata">Terima</span>
+                <span class="kata">Kasih</span>
+                <span class="kata">Banyak</span>
+                <span class="kata">Kak</span>
+            </h1>
+            <div class="divider reveal-item"data-delay="1400">
+               <span>♥</span>
+            </div >
+
+            <p id="typing" class="typing-text reveal-item" data-delay="1800"></p>
+            <div class="wishes reveal-item" data-delay="0" id="wishes">
+                <h2>✨ Semoga Sukses Selalu ✨</h2>
+                <p class="sub-wish">Semoga kakak selalu sehat, bahagia, <br>dan sukses terus ke depannya 🌷</p>
+            </div>
+
+            <div class="signature reveal-item" data-delay="0" id="signature">
+                <p class="sign-line">- Dengan tulus dari -</p>
+                <p class="sign-name">Kelompok Gurame</p>
+                <p class="sign-group">( kelompok 6)</p>
+            </div>
+
+            <button class="restart-btn reveal-item" data-delay="0" id="restartBtn" onclick="restartShow()">
+                🔄 Putar Ulang
+            </button>
+        </div>
+    </div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
